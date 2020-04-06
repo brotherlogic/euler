@@ -5,11 +5,11 @@ import "testing"
 func Test4(t *testing.T) {
 	tv, s := solve151(0, []int{4})
 
-	if tv != 0 {
+	if tv != 1 {
 		t.Errorf("Bad pulls: %v", tv)
 	}
 
-	if s != 0 {
+	if s != 1 {
 		t.Errorf("Bad singles: %v", s)
 	}
 }
