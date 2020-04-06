@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package euler;
+
+message SolveRequest{
+  int32 problem_number = 1;
+}
+
+message SolveResponse {
+  int64 numerator = 1;
+  int64 denominator = 2;
+}
+
+service EulerService {
+  rpc Solve(SolveRequest) returns (SolveResponse) {};
+}
