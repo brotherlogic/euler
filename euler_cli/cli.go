@@ -7,21 +7,21 @@ import (
 	"os"
 
 	"github.com/brotherlogic/goserver/utils"
-	"google.golang.org/grpc"
 
 	pb "github.com/brotherlogic/euler/proto"
 )
 
 func main() {
-	conn, err := grpc.Dial("discovery:///euler", grpc.WithInsecure(), grpc.WithBalancerName("my_pick_first"))
+	ctx, cancel := utils.BuildContext("euler-cli", "euler")
+	defer cancel()
+
+	conn, err := utils.LFDialServer(ctx, "euler")
 	if err != nil {
 		log.Fatalf("Unable to dial: %v", err)
 	}
 	defer conn.Close()
 
 	client := pb.NewEulerServiceClient(conn)
-	ctx, cancel := utils.BuildContext("euler-cli", "euler")
-	defer cancel()
 
 	switch os.Args[1] {
 	case "solve":
