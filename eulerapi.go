@@ -12,7 +12,7 @@ import (
 //Solve a problem
 func (s *Server) Solve(ctx context.Context, req *pb.SolveRequest) (*pb.SolveResponse, error) {
 	st := time.Now()
-	resp := s.intSolve(req.GetProblemNumber())
+	resp := s.intSolve(ctx, req.GetProblemNumber())
 	if resp != nil {
 		resp.TimeTakenMillis = time.Since(st).Milliseconds()
 	}
