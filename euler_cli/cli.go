@@ -10,15 +10,7 @@ import (
 	"google.golang.org/grpc"
 
 	pb "github.com/brotherlogic/euler/proto"
-
-	//Needed to pull in gzip encoding init
-	_ "google.golang.org/grpc/encoding/gzip"
-	"google.golang.org/grpc/resolver"
 )
-
-func init() {
-	resolver.Register(&utils.DiscoveryClientResolverBuilder{})
-}
 
 func main() {
 	conn, err := grpc.Dial("discovery:///euler", grpc.WithInsecure(), grpc.WithBalancerName("my_pick_first"))
@@ -41,7 +33,7 @@ func main() {
 			if err != nil {
 				log.Fatalf("Error on solve: %v", err)
 			}
-			fmt.Printf("Solution: %v\n", res)
+			fmt.Printf("Solution: %v (took %vms)\n", res.GetAnswer(), res.GetTimeTakenMillis())
 		}
 	}
 }

@@ -11,7 +11,8 @@ message SolveRequest{
 message SolveResponse {
   int64 numerator = 1;
   int64 denominator = 2;
-  int64 time_taken_millis = 3;
+  int64 answer = 3;
+  int64 time_taken_millis = 4;
 }
 
 service EulerService {
