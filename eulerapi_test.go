@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/brotherlogic/keystore/client"
+	keystoreclient "github.com/brotherlogic/keystore/client"
 
 	pb "github.com/brotherlogic/euler/proto"
 )
@@ -20,7 +20,7 @@ func InitTestServer() *Server {
 func TestSolveProblem(t *testing.T) {
 	s := InitTestServer()
 
-	_, err := s.Solve(context.Background(), &pb.SolveRequest{ProblemNumber: 100})
+	_, err := s.Solve(context.Background(), &pb.SolveRequest{ProblemNumber: 1})
 
 	if err == nil {
 		t.Errorf("No error on solve")
