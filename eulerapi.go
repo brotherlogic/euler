@@ -15,6 +15,7 @@ func (s *Server) Solve(ctx context.Context, req *pb.SolveRequest) (*pb.SolveResp
 	resp := s.intSolve(ctx, req.GetProblemNumber())
 	if resp != nil {
 		resp.TimeTakenMillis = time.Since(st).Milliseconds()
+		return resp, nil
 	}
 
 	return nil, fmt.Errorf("Cannot solve that problem")
