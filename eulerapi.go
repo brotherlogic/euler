@@ -18,7 +18,7 @@ func (s *Server) Solve(ctx context.Context, req *pb.SolveRequest) (*pb.SolveResp
 		return resp, nil
 	}
 
-	return nil, fmt.Errorf("Cannot solve the given problem %v", req.GetProblemNumber())
+	return nil, fmt.Errorf("Cannot solve the given problem (%v)", req.GetProblemNumber())
 }
 
 func (s *Server) intSolve(ctx context.Context, number int32) *pb.SolveResponse {
