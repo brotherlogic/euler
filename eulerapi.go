@@ -27,6 +27,10 @@ func (s *Server) intSolve(ctx context.Context, number int32) *pb.SolveResponse {
 		return &pb.SolveResponse{
 			Answer: int64(s.solve1(ctx, 1000)),
 		}
+	case 2:
+		return &pb.SolveResponse{
+			Answer: int64(s.solve2(ctx, 4000000)),
+		}
 	}
 
 	return nil

@@ -20,7 +20,7 @@ func InitTestServer() *Server {
 func TestSolveProblem(t *testing.T) {
 	s := InitTestServer()
 
-	_, err := s.Solve(context.Background(), &pb.SolveRequest{ProblemNumber: 1})
+	_, err := s.Solve(context.Background(), &pb.SolveRequest{ProblemNumber: -1})
 
 	if err == nil {
 		t.Errorf("No error on solve")
