@@ -1,13 +1,13 @@
 package main
 
-func isPrime(n int) bool {
+func isPrime(n int64) bool {
 	if n == 2 {
 		return true
 	}
 	if n < 2 {
 		return false
 	}
-	for i := 3; i < n; i++ {
+	for i := int64(3); i < n; i++ {
 		if n%i == 0 {
 			return false
 		}
@@ -16,10 +16,10 @@ func isPrime(n int) bool {
 	return true
 }
 
-func primeFactors(n int) []int {
-	var nums []int
+func primeFactors(n int64) []int64 {
+	var nums []int64
 
-	for i := 2; i < n; i++ {
+	for i := int64(2); i < n; i++ {
 		if n%i == 0 && isPrime(i) {
 			nums = append(nums, i)
 		}

@@ -30,7 +30,7 @@ func (s *Server) solve2(ctx context.Context, max int) int {
 	return sum
 }
 
-func (s *Server) solve3(ctx context.Context, val int) int {
+func (s *Server) solve3(ctx context.Context, val int64) int64 {
 	nums := primeFactors(val)
 	return nums[len(nums)-1]
 }
