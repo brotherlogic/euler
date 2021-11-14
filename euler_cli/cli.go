@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/brotherlogic/goserver/utils"
 
@@ -12,7 +13,7 @@ import (
 )
 
 func main() {
-	ctx, cancel := utils.BuildContext("euler-cli", "euler")
+	ctx, cancel := utils.ManualContext("euler-cli", time.Minute)
 	defer cancel()
 
 	conn, err := utils.LFDialServer(ctx, "euler")
