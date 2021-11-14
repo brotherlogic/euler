@@ -1,6 +1,8 @@
 package main
 
 import (
+	"math"
+
 	"golang.org/x/net/context"
 )
 
@@ -33,4 +35,21 @@ func (s *Server) solve2(ctx context.Context, max int) int {
 func (s *Server) solve3(ctx context.Context, val int64) int64 {
 	nums := primeFactors(val)
 	return nums[len(nums)-1]
+}
+
+func (s *Server) solve4(ctx context.Context, val int64) int64 {
+	start := math.Pow10(int(val - 1))
+	end := math.Pow10(int(val))
+
+	largest := int64(-1)
+	for num1 := start; num1 < end; num1++ {
+		for num2 := start; num2 < end; num2++ {
+			res := int64(num1 * num2)
+			if res > largest && isPalindrome(res) {
+				largest = res
+			}
+		}
+	}
+
+	return largest
 }

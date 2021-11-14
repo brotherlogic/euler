@@ -31,3 +31,12 @@ func TestSolve3(t *testing.T) {
 		t.Errorf("Wrong answer: %v vs %v", 29, sol)
 	}
 }
+
+func TestSolve4(t *testing.T) {
+	s := InitTestServer()
+	sol := s.solve4(context.Background(), 2)
+
+	if sol != 9009 {
+		t.Errorf("Wrong answer: %v vs %v", 9009, sol)
+	}
+}

@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"math"
+	"strconv"
+)
 
 func isPrime(n int64) bool {
 	if n == 2 {
@@ -46,4 +49,15 @@ func primeFactors(n int64) []int64 {
 	}
 
 	return nums
+}
+
+func isPalindrome(num int64) bool {
+	str := strconv.FormatInt(num, 10)
+	for i := 0; i < len(str)/2; i++ {
+		if str[i] != str[len(str)-i-1] {
+			return false
+		}
+	}
+
+	return true
 }
