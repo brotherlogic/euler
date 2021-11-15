@@ -61,3 +61,19 @@ func isPalindrome(num int64) bool {
 
 	return true
 }
+
+func getPrimes(max int64) []int64 {
+	var primes []int64
+
+	countarr := make([]bool, max+1)
+	for i := 2; i < len(countarr); i++ {
+		if !countarr[i] {
+			primes = append(primes, int64(i))
+			for j := i; j < len(countarr); j += i {
+				countarr[j] = true
+			}
+		}
+	}
+
+	return primes
+}

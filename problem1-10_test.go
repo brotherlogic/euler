@@ -58,3 +58,12 @@ func TestSolve6(t *testing.T) {
 		t.Errorf("Wrong answer: %v vs %v", 2640, sol)
 	}
 }
+
+func TestSolve7(t *testing.T) {
+	s := InitTestServer()
+	sol := s.solve7(context.Background(), 6)
+
+	if sol != 13 {
+		t.Errorf("Wrong answer: %v vs %v", 13, sol)
+	}
+}
