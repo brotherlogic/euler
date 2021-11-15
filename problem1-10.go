@@ -75,3 +75,14 @@ func (s *Server) solve5(ctx context.Context, val int64) int64 {
 
 	return -1
 }
+
+func (s *Server) solve6(ctx context.Context, val int64) int64 {
+	ssq := int64(0)
+	sum := int64(0)
+	for i := int64(1); i <= val; i++ {
+		ssq += i * i
+		sum += i
+	}
+
+	return sum*sum - ssq
+}
