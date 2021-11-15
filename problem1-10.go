@@ -53,3 +53,25 @@ func (s *Server) solve4(ctx context.Context, val int64) int64 {
 
 	return largest
 }
+
+func (s *Server) solve5(ctx context.Context, val int64) int64 {
+	mval := int64(1)
+	for i := int64(1); i <= val; i++ {
+		mval *= i
+	}
+	for i := int64(1); i < mval; i++ {
+		found := true
+		for j := int64(2); j < val; j++ {
+			if i%j != 0 {
+				found = false
+				break
+			}
+		}
+
+		if found {
+			return i
+		}
+	}
+
+	return -1
+}
