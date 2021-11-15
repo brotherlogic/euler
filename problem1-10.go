@@ -88,6 +88,6 @@ func (s *Server) solve6(ctx context.Context, val int64) int64 {
 }
 
 func (s *Server) solve7(ctx context.Context, val int64) int64 {
-	primes := getPrimes(214748364)
+	primes := getPrimes(21474836)
 	return primes[val-1]
 }
