@@ -51,6 +51,10 @@ func (s *Server) intSolve(ctx context.Context, number int32) *pb.SolveResponse {
 		return &pb.SolveResponse{
 			Answer: s.solve7(ctx, 10001),
 		}
+	case 8:
+		return &pb.SolveResponse{
+			Answer: s.solve8(ctx, 13),
+		}
 	}
 	return nil
 }
