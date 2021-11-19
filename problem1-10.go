@@ -114,3 +114,20 @@ func (s *Server) solve8(ctx context.Context, digs int) int64 {
 	}
 	return bProd
 }
+
+func (s *Server) solve9(ctx context.Context, sumv int64) []int64 {
+	var answers []int64
+	for a := int64(1); a < sumv; a++ {
+		for b := int64(1); b < sumv; b++ {
+			for c := int64(1); c < sumv; c++ {
+				if a+b+c == sumv {
+					if a*a+b*b == c*c {
+						answers = append(answers, a*b*c)
+					}
+				}
+			}
+		}
+	}
+
+	return answers
+}

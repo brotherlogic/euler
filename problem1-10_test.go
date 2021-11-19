@@ -76,3 +76,19 @@ func TestSolve8(t *testing.T) {
 		t.Errorf("Wrong answer: %v vs %v", 5832, sol)
 	}
 }
+
+func TestSolve9(t *testing.T) {
+	s := InitTestServer()
+	sol := s.solve9(context.Background(), 3+4+5)
+
+	found := false
+	for _, so := range sol {
+		if so == 3*4*5 {
+			found = true
+		}
+	}
+
+	if !found {
+		t.Errorf("Could not find solution: %v", sol)
+	}
+}
