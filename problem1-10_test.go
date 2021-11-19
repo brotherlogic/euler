@@ -92,3 +92,12 @@ func TestSolve9(t *testing.T) {
 		t.Errorf("Could not find solution: %v", sol)
 	}
 }
+
+func TestSolve10(t *testing.T) {
+	s := InitTestServer()
+	sol := s.solve10(context.Background(), 10)
+
+	if sol != 17 {
+		t.Errorf("Wrong answer: %v vs %v", 17, sol)
+	}
+}

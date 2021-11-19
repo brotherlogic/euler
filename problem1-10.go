@@ -131,3 +131,12 @@ func (s *Server) solve9(ctx context.Context, sumv int64) []int64 {
 
 	return answers
 }
+
+func (s *Server) solve10(ctx context.Context, maxv int64) int64 {
+	primes := getPrimes(maxv - 1)
+	sumv := int64(0)
+	for _, p := range primes {
+		sumv += p
+	}
+	return sumv
+}
