@@ -3,13 +3,11 @@ module github.com/brotherlogic/euler
 go 1.16
 
 require (
-	github.com/brotherlogic/buildserver v0.0.0-20211122214405-c983d528f785 // indirect
-	github.com/brotherlogic/discovery v0.0.0-20211122201709-d7c7cb44eb84 // indirect
-	github.com/brotherlogic/gobuildslave v0.0.0-20211122225059-4452aeb1b4c3 // indirect
-	github.com/brotherlogic/goserver v0.0.0-20211122204226-83dd5b358113
-	github.com/brotherlogic/keystore v0.0.0-20201029130503-da423c07fd79
+	github.com/brotherlogic/discovery v0.0.0-20220424202222-d3a91d62ee1a // indirect
+	github.com/brotherlogic/goserver v0.0.0-20220423235535-bd416e717c2c
+	github.com/brotherlogic/keystore v0.0.0-20220326232252-29f315526691
 	github.com/golang/protobuf v1.5.2
-	golang.org/x/net v0.0.0-20211118161319-6a13c67c3ce4
-	google.golang.org/grpc v1.42.0
-	google.golang.org/protobuf v1.27.1
+	golang.org/x/net v0.0.0-20220425223048-2871e0cb64e4
+	google.golang.org/grpc v1.46.0
+	google.golang.org/protobuf v1.28.0
 )
