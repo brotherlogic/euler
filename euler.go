@@ -64,10 +64,10 @@ func main() {
 		log.SetOutput(ioutil.Discard)
 	}
 	server := Init()
-	server.PrepServer()
+	server.PrepServer("euler")
 	server.Register = server
 
-	err := server.RegisterServerV2("euler", false, true)
+	err := server.RegisterServerV2(false)
 	if err != nil {
 		return
 	}
