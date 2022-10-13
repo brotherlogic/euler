@@ -5,6 +5,7 @@ go 1.16
 require (
 	github.com/brotherlogic/buildserver v0.0.0-20221011154458-d44ea5b648d4 // indirect
 	github.com/brotherlogic/githubcard v0.0.0-20221010180453-f2899b2cecbd // indirect
+	github.com/brotherlogic/gobuildslave v0.0.0-20221013023316-412ced5494c3 // indirect
 	github.com/brotherlogic/goserver v0.0.0-20220930143508-9c9ff6258bec
 	github.com/brotherlogic/keystore v0.0.0-20220919100110-299b209de552
 	github.com/golang/protobuf v1.5.2
