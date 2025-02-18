@@ -13,15 +13,15 @@ require (
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
-	github.com/brotherlogic/buildserver v0.0.0-20250218131611-658817037b0b // indirect
+	github.com/brotherlogic/buildserver v0.0.0-20250218220221-7e1166cf01c6 // indirect
 	github.com/brotherlogic/datastore v0.0.0-20250113225754-a9cab19c721e // indirect
 	github.com/brotherlogic/discovery v0.0.0-20241109204028-02908558af09 // indirect
-	github.com/brotherlogic/dstore v0.0.0-20250218133234-1fc782ed9eb1 // indirect
-	github.com/brotherlogic/githubcard v0.0.0-20250218141709-5ce4c1217999 // indirect
+	github.com/brotherlogic/dstore v0.0.0-20250218223845-0158093666e4 // indirect
+	github.com/brotherlogic/githubcard v0.0.0-20250218193443-4429160313cd // indirect
 	github.com/brotherlogic/githubridge v0.2848.0 // indirect
-	github.com/brotherlogic/gobuildslave v0.0.0-20250218141314-9348c7191e74 // indirect
-	github.com/brotherlogic/lock v0.0.0-20250218141440-d0308b3952c1 // indirect
-	github.com/brotherlogic/logging v0.0.0-20250218133301-2d5d2e498803 // indirect
+	github.com/brotherlogic/gobuildslave v0.0.0-20250218223943-ccc0f2f1b003 // indirect
+	github.com/brotherlogic/lock v0.0.0-20250218193314-3a0718a391b5 // indirect
+	github.com/brotherlogic/logging v0.0.0-20250218224120-2bdecdd2c995 // indirect
 	github.com/brotherlogic/monitor v0.0.0-20221025152653-c10877c5f9e6 // indirect
 	github.com/brotherlogic/versionserver v0.0.0-20221025154054-c9bcd41be2f2 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
@@ -35,5 +35,5 @@ require (
 	github.com/struCoder/pidusage v0.2.1 // indirect
 	golang.org/x/sys v0.30.0 // indirect
 	golang.org/x/text v0.22.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20250212204824-5a70512c5d8b // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20250218202821-56aae31c358a // indirect
 )
